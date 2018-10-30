@@ -1,10 +1,9 @@
-//your variable declarations here
+Spaceship = new Spaceship[];
 public void setup() 
 {
   //your code here
 }
 public void draw() 
 {
-  //your code here
+  show();
 }
-
