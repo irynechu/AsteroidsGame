@@ -10,6 +10,9 @@
     yCorners[1] = 0;
     xCorners[2] = -8;
     yCorners[2] = 8;
+    myCenterX = 250;
+    myCenterY = 250;
+   
   }
 
   public void setX(int x) {myCenterX = x;}
