@@ -5,5 +5,5 @@ public void setup()
 }
 public void draw() 
 {
-  Spaceship.show();
+  show();
 }
