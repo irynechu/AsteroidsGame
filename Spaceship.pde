@@ -11,18 +11,15 @@
     xCorners[2] = -8;
     yCorners[2] = 8;
   }
+
+  public void setX(int x) {myCenterX = x;}
+  public int getX() {return (int) myCenterX;}
+  public void setY(int y) {myCenterY = y;}   
+  public int getY() {return (int) myCenterY;}
+  public void setDirectionX(double x) {myDirectionX = x;}
+  public double getDirectionX() {return myDirectionX;} 
+  public void setDirectionY(double y) {myDirectionY = y;} 
+  public double getDirectionY() {return myDirectionY;}
+  public void setPointDirection(int degrees) {myPointDirection = degrees;}  
+  public double getPointDirection() {return myPointDirection;}
 }
-
-
-  
-  public void setX(int x); 
-  public void setX(int x){myX = x;}
-  abstract public int getX() {return myX;}
-  abstract public void setY(int y);   
-  abstract public int getY();   
-  abstract public void setDirectionX(double x) {myDirectionX = x;}
-  abstract public double getDirectionX() {return myDirectionX;} 
-  abstract public void setDirectionY(double y) {myDirectionY = y;} 
-  abstract public double getDirectionY() {return myDirectionY;}
-  abstract public void setPointDirection(int degrees); {myPointDirection = degrees;}  
-  abstract public double getPointDirection(); {return myPointDirection;}
