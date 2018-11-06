@@ -12,7 +12,10 @@
     yCorners[2] = 8;
     myCenterX = 250;
     myCenterY = 250;
-   
+    myDirectionX = 0;
+    myDirectionY = 0;
+    myPointDirection = 0;
+    myColor = color(0,255,0);
   }
 
   public void setX(int x) {myCenterX = x;}
@@ -25,4 +28,11 @@
   public double getDirectionY() {return myDirectionY;}
   public void setPointDirection(int degrees) {myPointDirection = degrees;}  
   public double getPointDirection() {return myPointDirection;}
+  public void hyperspace() {
+    myCenterX = (Math.random()*500);
+    myCenterY = (Math.random()*500);
+    myPointDirection = 180*(Math.random());
+    myDirectionX = 0;
+    myDirectionY = 0;
+  }
 }
