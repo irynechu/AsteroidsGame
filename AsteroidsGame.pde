@@ -9,11 +9,11 @@ public void setup()
   }
 }
 public void draw() 
-{
- background(255);
+{ 
+ background(0);
  for (int i = 0; i < nightSky.length; i++)
  {
-  // nightSky[i].show();
+   nightSky[i].show();
  }
  bob.show();
  bob.move();
@@ -28,5 +28,7 @@ public void keyPressed()
  bob.turn(10);
  if(key == 's')
  bob.accelerate(-0.3);
+ if(key == 'x')
+ bob.hyperspace();
  
 }
