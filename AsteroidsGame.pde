@@ -1,5 +1,6 @@
 Spaceship bob = new Spaceship();
 Star[] nightSky = new Star[200];
+Asteroid bobb = new Asteroid();
 public void setup() 
 {
   size(500,500);
@@ -17,6 +18,9 @@ public void draw()
  }
  bob.show();
  bob.move();
+ bobb.show();
+ bobb.move();
+ 
 }
 public void keyPressed() 
 {
