@@ -1,38 +1,40 @@
-Spaceship bob = new Spaceship();
-Star[] nightSky = new Star[200];
-Asteroid bobb = new Asteroid();
-public void setup() 
-{
-  size(500,500);
-  for (int i = 0; i < nightSky.length; i++)
-  {
-    nightSky[i] = new Star();
+class Asteroid extends Floater {
+  private int rotation;
+  public Asteroid() {
+    corners = 6;
+    xCorners = new int[corners];
+    yCorners = new int[corners];
+    xCorners[0] = -11;
+    yCorners[0] = -8;
+    xCorners[1] = 7;
+    yCorners[1] = -8;
+    xCorners[2] = 13;
+    yCorners[2] = 0;
+    xCorners[3] = 6;
+    yCorners[3] = 10;
+    xCorners[4] = -11;
+    yCorners[4] = 8;
+    xCorners[5] = -5;
+    yCorners[5] = 0;
+    myColor = color(113,113,113);
+    myCenterX = (Math.random() * 500);
+    myCenterY = (Math.random() * 500);
+    myPointDirection = (Math.random() * 361);
+    myDirectionX = Math.random() * 4;
+    myDirectionY = Math.random() * 4;
+    rotation = (int)(Math.random() * 3 + 1);
+    
   }
-}
-public void draw() 
-{ 
- background(0);
- for (int i = 0; i < nightSky.length; i++)
- {
-   nightSky[i].show();
- }
- bob.show();
- bob.move();
- bobb.show();
- bobb.move();
- 
-}
-public void keyPressed() 
-{
- if(key == 'w')
- bob.accelerate(0.3);
- if(key =='a')
- bob.turn(-10);
- if(key == 'd')
- bob.turn(10);
- if(key == 's')
- bob.accelerate(-0.3);
- if(key == 'x')
- bob.hyperspace();
- 
-}
+  
+  public void setX(int x) {myCenterX = x;}
+  public int getX() {return (int) myCenterX;}
+  public void setY(int y) {myCenterY = y;}
+  public int getY() {return (int) myCenterY;}
+  public void setDirectionX(double x) {myDirectionX = x;}
+  public double getDirectionX() {return (double) myDirectionX;}
+  public void setDirectionY(double y) {myDirectionY = y;}
+  public double getDirectionY() {return (double) myDirectionY;}
+  public void setPointDirection(int degrees) {myPointDirection = degrees;}
+  public double getPointDirection() {return myPointDirection;}
+
+  }
