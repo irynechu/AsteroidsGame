@@ -1,5 +1,5 @@
 class Asteroid extends Floater {
-  private int rotation;
+  public int rotation;
   public Asteroid() {
     corners = 6;
     xCorners = new int[corners];
