@@ -1,8 +1,8 @@
 Spaceship bob = new Spaceship();
 Star[] nightSky = new Star[200];
 Asteroid bobb = new Asteroid();
-
-ArrayList<Asteroid> roc = new ArrayList<Asteroid>();
+ArrayList <Bullet> bill = new ArrayList <Bullet>();
+ArrayList <Asteroid> roc = new ArrayList<Asteroid>();
 
 public void setup() 
 {
@@ -15,7 +15,12 @@ public void setup()
   for (int i = 0 ; i < 38 ; i++) {
     roc.add(i, new Asteroid());
   }
-  
+  for (int i = 0; i < bill.size(); i++) {
+    bill.get(i).show();
+    bill.get(i).move();
+    if(bill.get(i).getX() > 490 || bill.get(i).getY() > 490)
+    bill.remove(i);
+  }
   
 }
 public void draw() 
@@ -51,5 +56,6 @@ public void keyPressed()
  bob.accelerate(-0.3);
  if(key == 'x')
  bob.hyperspace();
- 
+ if(key == 'f')
+ bill.add(roc.Bullet(bob));
 }
